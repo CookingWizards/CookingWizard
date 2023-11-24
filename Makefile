@@ -2,5 +2,5 @@
 	python -m venv .venv
 	pipenv install
 
-check: .venv
-	pipenv run python main.py
+initDb: .venv
+	pipenv run python init_db.py

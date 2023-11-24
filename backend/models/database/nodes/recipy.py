@@ -1,9 +1,9 @@
+from .node import Node
 
-class Recipy:
+class Recipy(Node):
 
     def __init__(self, name: str, description: str, servings: int):
-        self.type = 'recipy'
-        self.uniquename = name
+        super().__init__(name, 'recipy')
         self.name = name
         self.description = description
         self.servings = servings

@@ -1,9 +1,9 @@
+from .node import Node
 
-class Ingredient:
+class Ingredient(Node):
 
     def __init__(self, name: str, unit: str, is_partitionable: bool):
-        self.type = 'ingredient'
-        self.uniquename = f'{name}_{unit}'
+        super().__init__(f'{name}_{unit}', 'ingredient')
         self.name = name
         self.unit = unit
         self.is_paritionable = is_partitionable

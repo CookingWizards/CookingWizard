@@ -1,9 +1,8 @@
+from .relationship import Relationship
 
-class Requires:
+class Requires(Relationship):
 
     def __init__(self, fromNode, toNode, amount: int) -> None:
-        self.type = 'requires'
-        self.fromNode = fromNode
-        self.toNode = toNode
+        super().__init__(fromNode, toNode, 'requires')
         self.tagName = 'amount'
         self.tagValue = amount
